@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+
+import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import { Header } from './Components/Header';
 import { ProductList } from './Components/ProductList';
@@ -9,6 +10,7 @@ function App() {
   const [countProducts, setCountProducts] = useState(0);
 
   return (
+    <Routes>
     <>
       <Header
         allProducts={allProducts}
@@ -27,6 +29,7 @@ function App() {
         setCountProducts={setCountProducts}
       />
     </>
+    </Routes>
   );
 }
 
